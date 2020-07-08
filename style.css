@@ -1,0 +1,40 @@
+const debounce = (func, delay = 1000) => {
+    let timeoutId;
+    return (...args) => {
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        timeoutId = setTimeout(() => {
+            func.apply(null, args);
+        }, delay);
+    };
+};.tutorial {
+    width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+figure.image {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+figure .image img {
+    width: 128px;
+}
+
+.notification {
+    margin-top: 20px !important;
+}
+
+.title .icon {
+    margin-left: 15px;
+}
+
+.hero {
+    margin-bottom: 20px;
+}
+
+.forms {
+ 
