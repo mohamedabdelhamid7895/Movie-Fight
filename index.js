@@ -76,8 +76,8 @@ const runComparison = () => {
     leftSideStats.forEach((leftStat, index) => {
         const rightStat = rightSideStats[index];
 
-        const leftSideValue = leftStat.dataset.value;
-        const rightSideValue = rightStat.dataset.value;
+        const leftSideValue = parseInt(leftStat.dataset.value);
+        const rightSideValue = parseInt(rightStat.dataset.value);
 
         if (rightSideValue > leftSideValue) {
             leftStat.classList.remove('is-primary');
@@ -105,12 +105,11 @@ const movieTemplate = movieDetail => {
             return prev + value;
         }
     }, 0);
-
-    return `
-    <article class="media">
+    return 
+      <article class="media">
       <figure class="media-left">
         <p class="image">
-          <img src="${movieDetail.Poster}" />
+          <img src="${movieDetail.Poster}"/>
         </p>
       </figure>
       <div class="media-content">
@@ -141,6 +140,5 @@ const movieTemplate = movieDetail => {
     <article data-value=${imdbVotes} class="notification is-primary">
       <p class="title">${movieDetail.imdbVotes}</p>
       <p class="subtitle">IMDB Votes</p>
-    </article>
-  `;
+    </article>;
 }; 
