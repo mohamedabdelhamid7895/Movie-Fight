@@ -143,4 +143,4 @@ const movieTemplate = movieDetail => {
       <p class="subtitle">IMDB Votes</p>
     </article>
   `;
-};
+}; 
