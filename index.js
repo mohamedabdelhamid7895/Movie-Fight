@@ -105,7 +105,7 @@ const movieTemplate = movieDetail => {
             return prev + value;
         }
     }, 0);
-    return 
+    return ` 
       <article class="media">
       <figure class="media-left">
         <p class="image">
@@ -140,5 +140,5 @@ const movieTemplate = movieDetail => {
     <article data-value=${imdbVotes} class="notification is-primary">
       <p class="title">${movieDetail.imdbVotes}</p>
       <p class="subtitle">IMDB Votes</p>
-    </article>;
+    </article> `;
 }; 
